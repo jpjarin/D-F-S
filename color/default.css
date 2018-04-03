@@ -17,7 +17,7 @@ ul.nav li a:hover {
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #d43076;
+    background-color: #00c2bf;
 }
 
 .bg-skin {
@@ -36,4 +36,7 @@ footer {
   color: #fff;
   background-color: #d43076;
   border-color: #d43076;
+}
+.btn-skin:hover{
+	background-color: #760061;
 }
