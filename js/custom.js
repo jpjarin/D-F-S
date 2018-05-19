@@ -2,13 +2,45 @@
 
 	new WOW().init();
 	
-	$(window).load(function(){
-      $("#navigation").sticky({ topSpacing: 0 });
+	$(".navbar").hide();
+	
+	// Fade in .navbar
+	$(function () {
+		$(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+			if ($(this).scrollTop() > 500) {
+				$('.navbar').fadeIn();
+			} else {
+				$('.navbar').fadeOut();
+			}
+		});
+
+	
+	});
+	$(window).bind('scroll', function() {
+        var navHeight = $(window).height() - 100;
+        if ($(window).scrollTop() > navHeight) {
+            $('.navbar-default').addClass('on');
+        } else {
+            $('.navbar-default').removeClass('on');
+        }
     });
 
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
+    $('body').scrollspy({ 
+        target: '.navbar-default',
+        offset: 80
+    });
+
+	//preload
+	$(window).on('DOMContentLoaded', function() {
+	    var Body = $('body,html');
+	    Body.css({"overflow":"hidden"});
+	    Body.on('touchmove', function(e){e.preventDefault();});
+	});
+	$(window).on('load', function() {
+	    $('#preloader').fadeOut();
+	    $('body,html').css({"overflow":"visible"});
+	    $('body/html').off('touchmove');
 	});
 
 
