@@ -38,6 +38,7 @@ h3{
     font-family: Delius, sans-serif;
     color:#00ad96;
 }
+
 blockquote {
 	font-family: Georgia, arial, sans-serif;
 	color: #bbb;
@@ -48,10 +49,14 @@ p {
     margin: 0 0 20px;
     font-size: 16px;
     line-height: 1.6em;
+    color: #ff107f;
 }
 
-p.lead {
+.lead {
+    margin:25px 55px 0 0;
+    font-size: 20px;
 	font-weight: 600;
+    color: #555;
 }
 
 a {
@@ -85,21 +90,25 @@ img.img-responsive {
 /* ------- Navigation ------------ */
 .navbar-custom {
     padding: 0;
+    border-bottom: 0;
     letter-spacing: 1px;
     background: #fff;
+    text-transform: uppercase;
     border-bottom: 1px solid #eee;
     box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
     text-align: center;
+    font-family: Varela Round, sans-serif;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
 }
 
-.nav.navbar-nav {
-  margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.navbar .navbar-collapse {
+  text-align: center;
 }
+
 .navbar-custom .navbar-brand {
     font-weight: 600;
 }
@@ -107,23 +116,22 @@ img.img-responsive {
     color: #E75926;
 }
 .navbar-custom .navbar-brand:focus {
-    outline: 0;
+    
 }
 .navbar-custom .navbar-toggle {
-    color: #eee;
+    
     font-size: 18px;
     border-radius: 2px;
     padding: 0 4px;
 }
 .navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
-    background-color: #E75926;
-    color: #ffffff;
+    
 }
 .navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
-    outline: 0;
+    
 }
 .navbar-custom a {
-    color: #d43076;
+    color: #000;
 }
 .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
@@ -131,23 +139,23 @@ img.img-responsive {
     transition: background .3s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
-    outline: 0;
-    color: #E75926;
-    background-color: transparent;
+    background-color: #fff;
+    
+    
 }
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
-    outline: 0;
-    background-color: transparent;
-    color: #E75926;
+    
+    background-color: #fff;
 }
 .navbar-custom .nav li.active {
-    outline: 0;
+    
+    border-bottom: 5px solid #ff107f;
 }
 .navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
+    
 }
 .navbar-custom .nav li.active a:hover {
-    color: #fff;
+    
 }
 
 
@@ -238,6 +246,7 @@ hr {
 	font-size: 40px;
 	margin-bottom: 10px;
 	line-height: 1em;
+    font-family: Delius;
 }
 .section-heading i {
 	margin-bottom: 20px;
@@ -356,6 +365,15 @@ hr {
 /* ===========================
 --- Contact
 ============================ */
+#contact i{
+    color: #ff107f;
+}
+#contact span{
+    color: #ff107f;   
+}
+#contact .col-xs-7,.col-xs-5{
+    margin-bottom: 25px;
+}
 
 .map{
     margin:auto;
@@ -364,8 +382,8 @@ hr {
 }
 
 .form-wrapper {
-	background: #f9f9f9;
-	padding: 40px;
+	background: #fff;
+	padding:0 40px;
 	 border-radius: 6px;
 }
 
@@ -385,6 +403,7 @@ form#contact-form input,form#contact-form select,form#contact-form textarea {
 	margin-bottom: 20px;
 	background: #fefefe;
 	color: #888;
+    padding: 0 20px;
 }
 
 form#contact-form input,form#contact-form select {
@@ -599,7 +618,15 @@ a.btn:hover {
 	.navbar-header .fa {
 		color: #666;
 	}
-	
+	.navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
 	.col-xs-6 {
 		margin-bottom: 30px;
 	}
@@ -614,7 +641,12 @@ a.btn:hover {
 	.navbar.navbar-custom.navbar-fixed-top {
 		margin-bottom: 30px;
 	}
-
+    .lead {
+    margin:20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
 	
 	.page-scroll a {
 		width: 40px;

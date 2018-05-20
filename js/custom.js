@@ -27,7 +27,7 @@
     });
 
     $('body').scrollspy({ 
-        target: '.navbar-default',
+        target: '.navbar',
         offset: 80
     });
 
