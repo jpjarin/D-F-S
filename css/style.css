@@ -37,6 +37,7 @@ h6 {
 h3{
     font-family: Delius, sans-serif;
     color:#00ad96;
+    margin-top: 0px;
 }
 
 blockquote {
@@ -213,7 +214,7 @@ hr {
 ============================ */
 
 .home-section {
-    padding-top: 120px;
+    padding-top: 100px;
     padding-bottom: 110px;
 	display:block;
     position:relative;
@@ -288,7 +289,7 @@ hr {
 }
 
 #intro.intro {
-	padding:10px 0 340px 0;
+	padding:10px 0 30% 0;
 }
 
 .intro .slogan {
@@ -403,7 +404,7 @@ form#contact-form input,form#contact-form select,form#contact-form textarea {
 	margin-bottom: 20px;
 	background: #fefefe;
 	color: #888;
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 form#contact-form input,form#contact-form select {
@@ -613,7 +614,11 @@ a.btn:hover {
 
 
 /* Media queries */
-
+@media (max-width:1024px) {
+     #intro.intro {
+    padding:40% 0 65% 0;
+} 
+}
 @media (max-width:768px) {
 	.navbar-header .fa {
 		color: #666;
@@ -623,6 +628,15 @@ a.btn:hover {
         float: none;
         vertical-align: top;
     }
+    #intro.intro {
+    padding:45% 0 65% 0;
+}   
+.home-section{
+    padding-top: 80px;
+}
+    .slogan{
+    margin-bottom: 70px;
+}
 
     .navbar .navbar-collapse {
         text-align: center;
@@ -633,6 +647,12 @@ a.btn:hover {
 }
 
 @media (max-width:480px) {
+    #intro.intro {
+    padding:50% 0 70% 0;
+}   
+.home-section{
+    padding-top: 80px;
+}
 
 	.navbar-custom .nav.navbar-nav {
     background-color: rgba(255,255,255,.4);
@@ -642,12 +662,17 @@ a.btn:hover {
 		margin-bottom: 30px;
 	}
     .lead {
-    margin:20px;
+    margin:20px 0 35px 0;
     font-size: 15px;
     font-weight: 600;
     color: #555;
 }
-	
+.slogan{
+    margin-bottom: 70px;
+}
+.page-scroll{
+    margin:10px;
+}
 	.page-scroll a {
 		width: 40px;
 		height: 40px;
