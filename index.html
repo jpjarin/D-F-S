@@ -1,249 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="img/logo.png"/>
-    <title>Dalaine Flowershop</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dalaine Flowershop</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="css/nivo-lightbox.css" rel="stylesheet" />
-	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-	<link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />	
-	<link href="css/animate.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
-	<link href="color/default.css" rel="stylesheet">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" type="image/png" href="img/logo.png"/>
+  <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<!-- Preloader -->
-	<div id="preloader">
-	  <div class="loader"><span class="loading">Loading...</span></div>
-	</div>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
 
-	<!-- Section: intro -->
-    <section id="intro" class="intro">
-	
-		<div class="slogan">
-			<a href="index.html"><img class="logo img-responsive" src="img/logo.jpg" alt="" /></a>
-		</div>
-		<div class="page-scroll">
-			<a class="learn-more" href="#about">
-				Learn more
-			</a>
-		</div>
+ <div class="main">
+    <nav id="navigation" class="navigation">
+      <div class="menu">
+        <i class="fa fa-bars noselect"></i>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="intro" class="intro-section">
+      <canvas id="sparks"></canvas>
+      <!-- <div class="borders mx-auto"></div> -->
+      <div class="container text-center h-100 m-auto">
+
+        <img src="img/intro-img.png" class="img-fluid intro-img">
+        <img src="img/buntings.png" class="img-fluid buntings">
+        <img src="img/objects.png" class="img-fluid objects">
+        <img src="img/rings.png" class="img-fluid rings">
+
+
+        <div class="teddy">
+          <div class="right-ear"></div>
+          <div class="left-ear"></div>
+          <div class="head">
+            <div class="right-eye"></div>
+            <div class="left-eye"></div>
+            <div class="mouth-area">
+              <div class="right-cheek"></div>
+              <div class="left-cheek"></div>
+              <div class="nose">
+                <div class="nose-inner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="body"></div>
+          <div class="right-arm">
+            <div class="arm-inner"></div>
+            <div class="paw"></div>
+          </div>
+          <div class="left-arm">
+            <div class="arm-inner"></div>
+            <div class="paw"></div>
+          </div>
+          <div class="right-leg">
+            <div class="foot"></div>
+          </div>
+          <div class="left-leg">
+            <div class="foot"></div>
+          </div>
+        </div>
+
+        <div class="fb-link">
+          <a href="https://www.facebook.com/dalaineshop/" target="_blank"><i id="fb-square" class="fab fa-facebook-square m-0"></i><span id="fb-link">facebook.com/dalaineshop</span></a>
+        </div>
+
+          <div class="scroll-down">
+            <i class="fas fa-angle-down"></i>
+          </div>
+
+      </div>
     </section>
-	<!-- /Section: intro -->
-	
-    <!-- Navigation -->
- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-  <div class="container">
-  	<div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button></div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-        <li class="hidden"> <a href="#page-top"></a> </li>
-        <li> <a class="page-scroll" href="#about">About Us</a> </li>
-        <li> <a class="page-scroll" href="#gallery">Gallery</a> </li>
-        <li> <a class="page-scroll" href="#contact">Contact Us</a> </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse --> 
-  </div>
-  <!-- /.container --> 
-</nav>
-    <!-- /Navigation -->  
 
-	<!-- Section: about -->
-    <section id="about" class="home-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					
-						<div class="section-heading text-center">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<h1>DaLaine Flowershop</h1>
-						</div>
-						</div>
-					
-				</div>
-			</div>
-		</div>
+    <!-- <div style="position: relative;">
+      <div class="separator">
+        <i class="fas fa-angle-down"></i>
+      </div>
+    </div> -->
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<img src="img/img2.jpg" class="wow fadeInLeft img-responsive img-rounded" style="margin:auto;" alt="" />
-				</div>		
-				<div class="col-md-6">
-					<h3 class="wow fadeInUp"><strong>We have <u style="color: #ff107f;">Flowers</u> for all occasions</strong></h3>
-					<p>
-					<ul>
-					  <li class="wow fadeInRight" data-wow-delay="0.2s">Baloons and Party Needs</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.3s">Wedding</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.4s">Funeral</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.5s">Plants</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.6s">Tables and Chairs</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.7s">Special Events</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.8s">Landscaping</li>
-					  <li class="wow fadeInRight" data-wow-delay="0.9s">Gift Baskets</li>
-					</ul>
-					</p>
-				</div>
-			</div>		
-		</div>
-	</section>
-	<!-- /Section: about -->
-	
-	
-	<!-- Section: gallery -->
-    <section id="gallery" class="home-section text-center bg-gray">
+    <section id="about" style="height: 500px;">
+      
+    </section>
+ </div>
 
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow fadeInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-						<h2>Our Photo Gallery</h2>
-						<p>Take a look at our moments, enjoy</p>
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script type="js/bootstrap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js"></script> -->
+  <!-- <script src="js/plugins.js"></script> -->
+  <script src="js/main.js"></script>
 
-		<div class="container">
-			<div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12" >
-					<div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <div id="owl-works" class="owl-carousel">
-                        <div class="item"><a href="img/gallery/original/16508551_1294823613942187_8771419214070176785_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/16508551_1294823613942187_8771419214070176785_n.jpg" class="img-responsive" alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/16602793_1294823313942217_6209394605230290477_n.jpg"  data-lightbox-gallery="gallery1"><img src="img/gallery/16602793_1294823313942217_6209394605230290477_n.jpg" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/16831088_1304028553021693_7177355780023591409_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/16831088_1304028553021693_7177355780023591409_n.jpg" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/29025454_1680369262054285_5919097290110549045_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/29025454_1680369262054285_5919097290110549045_n.jpg" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/29026403_1680369042054307_159806244982784923_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/29026403_1680369042054307_159806244982784923_n.jpg" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/29063203_1680367912054420_7384752730995344568_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/29063203_1680367912054420_7384752730995344568_n.jpg" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/22089622_1526763624081517_6575476966869021127_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/22089622_1526763624081517_6575476966869021127_n.jpg" class="img-responsive " alt="img"></a></div>
-                        <div class="item"><a href="img/gallery/original/27858360_1650624595028752_8713063547717713310_n.jpg" data-lightbox-gallery="gallery1"><img src="img/gallery/27858360_1650624595028752_8713063547717713310_n.jpg" class="img-responsive " alt="img"></a></div>
-                    </div>
-					</div>
-                </div>
-            </div>
-		</div>
-	</section>
-	<!-- /Section: services -->
-	
-
-	
-
-	<!-- Section: contact -->
-    <section id="contact" class="home-section text-center">
-		<div class="heading-contact">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					
-					<div class="section-heading">
-					<div class="wow fadeIn" data-wow-delay="0.4s">
-					<h2>Contact Us</h2>
-					</div>
-					
-					</div>
-					
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-
-    		<div class="row">
-        		<div class="col-md-6">
-	            	<div class="wow fadeIn" data-wow-delay="0.5s">
-						<div class="text-center lead"><span>Located at</span>: Purok Tres Amianan, Brgy. Caramutan, La Paz, Tarlac
-							<br><br><span>WE DELIVER! Call Us</span>: 0932 879 6902 | 0998 982 0394 | 0928 393 6335 | (045) 4911412
-							<br><br><span style="white-space: nowrap"><i class="fa fa-facebook-square fb"></i><a href="https://www.facebook.com/dalaineshop" target="_blank" style="color: #444"> www.facebook.com/dalaineshop</a></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="wow fadeInUp" data-wow-delay="0.6s">
-                <form name="sentMessage" id="contact-form">
-                <div class="row">
-                	<div class="form-wrapper">
-                        <div class="form-group">
-               
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-                        </div>
-                        <div class="form-group">
-                            
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
-                        </div>
-          
-             
-                        <div class="form-group">
-                
-                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Message"></textarea>
-                        </div>
-       					<div id="success"></div>
-           
-                        <button type="submit" class="btn btn-skin btn-block" id="sendMessageButton">
-                            Send Message</button>
-       
-                </div></div>
-                </form>
-				
-            </div>
-				</div>	
-
-			</div>
-        
-
-   
-
-		</div>
-	</section>
-	<!-- /Section: contact -->
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-12">
-					<p>Copyright &copy; Dalaine Flowershop 2018</p>
-				</div>
-                <!-- 
-                    All links in the footer should remain intact. 
-                    Licenseing information is available at: http://bootstraptaste.com/license/
-                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Lonely
-                -->
-			</div>	
-		</div>
-	</footer>
-
-    <!-- Core JavaScript Files -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>	
-	<script src="js/jquery.sticky.js"></script>
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/nivo-lightbox.min.js"></script>
-	<script src="js/jqBootstrapValidation.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/custom.js"></script>
-    <script src="js/contact.js"></script>
-
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
 </body>
 
 </html>

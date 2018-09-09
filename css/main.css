@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Varela+Round');
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    margin:0;
+    height: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+* { margin: 0; padding: 0; }
+body{
+    overflow-x: hidden;
+    margin:0;
+    height: 100%;
+    background-color: #ffffff;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+}
+button{
+  outline: none !important;
+}
+
+
+/*NAVIGATION*/
+nav#navigation{
+    position: fixed;
+    margin:20px;
+    z-index: 9999999;
+}
+.menu {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6aaf;
+  box-shadow: 1px 1px 10px 0px;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa {
+  font-family:'Font Awesome 5 Free';
+  font-size: 24px;
+  position: absolute;
+  top: 13px;
+  left: 14.5px;
+  transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+.menuClicked .fa {
+    z-index: 999;
+  color: white;
+  position: absolute;
+  top: 13px;
+  left: 14.5px;
+  transition: all 0.1s ease-in-out;
+  
+}
+
+.menuClicked{
+    padding-left: 20px;
+    width: 400px;
+    height: 70px;
+  /*width: 200px;
+  height: 255px;*/
+  border-radius: 2px;
+
+}
+
+.menu ul {
+  display: none;
+}
+
+.menuClicked ul {
+  display: block;
+  list-style-type: none;
+  color: white;
+  display: block;
+  
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.menuClicked ul a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font: roboto;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.menuClicked ul a:hover {
+  color: black;
+}
+
+.menuClicked ul li {
+  padding: 10px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+
+/*INTRO SECTION*/
+canvas#sparks{
+    position: fixed;
+    z-index: -1;
+}
+#intro.intro-section{
+    height: 100vh;
+    overflow:hidden;
+}
+.intro-img{
+    width: 60%;
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.buntings{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 35%;
+}
+.objects{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 28%;
+}
+.rings{
+    position: absolute;
+    z-index: 1;
+    left: 18%;
+    bottom: -5px;
+    width: 20%;
+}
+.borders{
+   border-top: 5px solid #f79dff;
+    border-left: 5px solid #f79dff;
+    border-right: 5px solid #f79dff;
+    border-radius: 10px;
+    position: absolute;
+    height: 130vh;
+    width: 98vw;
+    /* background-color: rgba(255, 255, 255, 0.46); */
+    top: 8px;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.teddy {
+        font-size: calc(33vmin / 260);
+    position: absolute;
+    margin: auto;
+    width: 260em;
+    height: 330em;
+    left: 0;
+    bottom: -35px;
+    z-index: 1;
+}
+.teddy div {
+    position: absolute;
+}
+.right-ear, .left-ear, .head, .right-eye, .left-eye, .mouth-area, .nose, .nose-inner, .right-cheek, .left-cheek, .body, .paw, .foot {
+    border-radius: 50%;
+}
+.right-ear, .left-ear {
+    background: rgb(95,60,30);
+    box-shadow: 0 0 0 20em rgb(190,120,60) inset;
+    width: 80em;
+    height: 80em;
+}
+.right-ear {
+    left: 30em;
+}
+.left-ear {
+    right: 30em;
+}
+.head {
+    background: rgb(190,120,60);
+    width: 160em;
+    height: 160em;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+}
+.right-eye, .left-eye, .nose-inner {
+    background: rgb(255, 255, 255);
+}
+.right-eye, .left-eye {
+    box-shadow: 2em -2em 0 8em inset;
+    top: 65em;
+    width: 20em;
+    height: 20em;
+}
+.right-eye {
+    left: 45em;
+}
+.left-eye {
+    right: 45em;
+}
+.mouth-area {
+    background: rgb(230,160,90);
+    right: 0;
+    bottom: 5em;
+    left: 0;
+    margin: auto;
+    width: 100em;
+    height: 70em;
+}
+.nose {
+    background: rgb(0,0,0);
+    top: 15em;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 40em;
+    height: 30em;
+}
+.nose-inner {
+    top: 3em;
+    right: 8em;
+    width: 10em;
+    height: 8em;
+}
+.right-cheek, .left-cheek {
+    bottom: 10em;
+    width: 30em;
+    height: 30em;
+}
+.right-cheek {
+    box-shadow: -2em -2em 0 0 rgb(115,80,45) inset;
+    left: 20em;
+}
+.left-cheek {
+    box-shadow: 2em -2em 0 0 rgb(115,80,45) inset;
+    right: 20em;
+}
+.body {
+    background: rgb(230,160,90);
+    box-shadow: 0 0 0 24em rgb(190,120,60) inset;
+    margin: auto;
+    right: 0;
+    bottom: 22em;
+    left: 0;
+    width: 170em;
+    height: 190em;
+}
+.right-arm, .left-arm {
+    background: rgb(170,100,50);
+    top: 130em;
+    width: 70em;
+    height: 60em;
+}
+.right-arm {
+    border-radius: 70em 0 0 0 / 60em 0 0 0;
+    left: 0;
+}
+.right-arm .arm-inner {
+    border-radius: 50em 0 0 0 / 80em 0 0 0;
+    box-shadow: 22em 22em 0 0 rgb(170,100,50) inset;
+    left: 55em;
+}
+.left-arm, .left-arm .paw {
+    right: 0;
+}
+.left-arm {
+    border-radius: 0 70em 0 0 / 0 60em 0 0;
+}
+.left-arm .arm-inner {
+    border-radius: 0 50em 0 0 / 0 80em 0 0;
+    box-shadow: -22em 22em 0 0 rgb(170,100,50) inset;
+    right: 55em;
+}
+.arm-inner {
+    width: 50em;
+    height: 80em;
+    bottom: 0;
+}
+.paw {
+    background: rgb(190,120,60);
+    width: 80em;
+    height: 60em;
+    top: 30em;
+}
+.right-leg, .left-leg {
+    background: rgb(170,100,50);
+    border-radius: 45em 45em 0 0 / 70em 70em 0 0;
+    bottom: 40em;
+    width: 90em;
+    height: 70em;
+}
+.right-leg  {
+    left: 10em;
+}
+.left-leg  {
+    right: 10em;
+}
+.foot  {
+    background: rgb(230,160,90);
+    box-shadow: 0 5em 0 10em rgb(190,120,60) inset;
+    width: 100%;
+    height: 80em;
+    top: 30em;
+}
+
+.fb-link{
+    margin: 20px;
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+}
+.fb-link a{
+    color: #30bbb5;
+}
+span#fb-link{
+    margin:0 8px;
+}
+
+
+.scroll-down{
+    border: 2px solid #f32bf3;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    /* padding: 19px; */
+    background-color: #fff;
+    position: absolute;
+    /* bottom: 0; */
+    z-index: 9;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%,-50%);
+}
+.scroll-down i{
+    color: #f32bf3;
+    position: absolute;
+    left: 20.5px;
+    top: 16px;
+}
+
+
+/*.separator{
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    bottom: -70px;
+}
+.separator i{
+    position: absolute;
+    left: 20.5px;
+    top: 16px;
+}*/
+
+
+/*ABOUT SECTION*/
+#about{
+-webkit-clip-path: polygon(0 0, 100% 15%, 100% 95%, 0% 100%);
+clip-path: polygon(0 0, 100% 15%, 100% 95%, 0% 100%);
+background: #f788ba; /* Old browsers */
+background: -moz-linear-gradient(45deg, #f788ba 0%, #f2a2eb 32%, #fd89d7 70%, #fd89d7 70%, #fca9ae 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #f788ba 0%,#f2a2eb 32%,#fd89d7 70%,#fd89d7 70%,#fca9ae 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #f788ba 0%,#f2a2eb 32%,#fd89d7 70%,#fd89d7 70%,#fca9ae 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f788ba', endColorstr='#fca9ae',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* Smartphones ----------- */
+@media only screen and (min-width: 320px) and (max-width: 767px){
+.intro-img,.buntings{
+    width: 90%;
+}
+.objects{
+    width: 48%;
+}
+.rings{
+     left: 3%;
+    bottom: 30%;
+    width: 30%;
+}
+.teddy{
+    font-size: calc(48vmin / 260);
+    left: -40px;
+    bottom: -35px;
+    overflow: hidden;
+}
+#fb-link{
+    display:none;
+}
+#fb-square{
+    font-size: 3rem;
+}
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-width : 767px) and (orientation:landscape) {
+.intro-img{
+    top: 50%;
+    width: 60%;
+}
+.buntings{
+    width: 50%;
+}
+.objects{
+    width: 28%;
+}
+.rings {
+    left: 22%;
+    bottom: 0;
+    width: 20%;
+}
+.scroll-down{
+    bottom: 0;
+}
+}
+/* Tablets ----------- */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  .intro-img{
+    width: 95%;
+  }
+  .buntings{
+    width: 53%;
+  }
+  .rings{
+     left: 37%;
+    bottom: 0;
+    width: 32%;
+  }
+  .scroll-down{
+    bottom: 25%;
+  }
+  .teddy {
+    font-size: calc(35vmin / 260);
+    left: -30px;
+}
+}
+/* Tablets (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.buntings{
+    width: 50%;
+}
+.rings{
+    left: 25%;
+}
+.teddy {
+    font-size: calc(30vmin / 260);
+}
+.scroll-down{
+    bottom: 18%;
+}
+}
+/* Laptops ----------- */
+@media only screen and (min-width: 1025px){
+    
+}
+@media only screen and (min-width: 1281px){
+    
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

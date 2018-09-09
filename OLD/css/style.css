@@ -59,7 +59,6 @@ p {
 	font-weight: 600;
     color: #555;
 }
-
 a {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -87,8 +86,12 @@ img.img-responsive {
 .learn-more:hover{
     background-color: #760061;
 }
+.hidden{
+    display: hidden;
+}
 
 /* ------- Navigation ------------ */
+
 .navbar-custom {
     padding: 0;
     border-bottom: 0;
@@ -282,6 +285,7 @@ hr {
 ============================ */
 
 .intro {
+    height: 100vh;
 	width:100%;
 	position:relative;	
 	background: url(../img/bg1.jpg) no-repeat top center;
@@ -298,6 +302,7 @@ hr {
 }
 
 .intro .page-scroll {
+    padding-top: 0%;
 	text-align: center;
 }
 
@@ -313,7 +318,24 @@ hr {
 .intro-text {
     font-size: 18px;
 }
-
+.scroll-btn{
+    background: url(../img/scroll.gif) 50% 50% no-repeat rgba(215, 181 ,94, 0);
+    background-size: 120%;
+   /* border: 1.5px solid #f400cb;*/
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: block;
+    height: 65px;
+    margin: 10px auto;
+    -webkit-transition: all 500ms ease-in-out 0s;
+    -moz-transition: all 500ms ease-in-out 0s;
+    -ms-transition: all 500ms ease-in-out 0s;
+    transition: all 500ms ease-in-out 0s;
+    width: 65px;
+    bottom: 0;
+    position: relative;
+}
 .intro .slogan h2 {
 	color: #FFF;
 	text-shadow: none;
@@ -616,10 +638,16 @@ a.btn:hover {
 /* Media queries */
 @media (max-width:1024px) {
      #intro.intro {
-    padding:40% 0 65% 0;
+    padding:23% 0 65% 0;
 } 
+.intro .page-scroll {
+    padding-top: 25%;
+}
 }
 @media (max-width:768px) {
+    .intro .page-scroll {
+    padding-top: 25%;
+}
 	.navbar-header .fa {
 		color: #666;
 	}
@@ -629,7 +657,7 @@ a.btn:hover {
         vertical-align: top;
     }
     #intro.intro {
-    padding:45% 0 65% 0;
+    padding:18% 0 65% 0;
 }   
 .home-section{
     padding-top: 80px;
@@ -648,10 +676,14 @@ a.btn:hover {
 
 @media (max-width:480px) {
     #intro.intro {
-    padding:50% 0 70% 0;
+    padding:30% 0 70% 0;
 }   
 .home-section{
     padding-top: 80px;
+}
+.intro .page-scroll {
+    padding-top: 25%;
+    text-align: center;
 }
 
 	.navbar-custom .nav.navbar-nav {
@@ -673,11 +705,11 @@ a.btn:hover {
 .page-scroll{
     margin:10px;
 }
-	.page-scroll a {
+	/*.page-scroll a {
 		width: 40px;
 		height: 40px;
 		margin-top: 10px;
 		font-size: 20px;
-	}
+	}*/
 	
 }
