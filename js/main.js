@@ -114,4 +114,13 @@ $(document).ready(function(){
 	  $(this.parentNode).toggleClass("menuClicked");   
 	 $(".fa").toggleClass("fa-bars fa-times");
 	});
+	
+
+	// $('#scroll-down a').on('click', function(event) {
+ //            var $anchor = $(this);
+ //            $('html, body').stop().animate({
+ //                scrollTop: $($anchor.attr('href')).offset().top
+ //            }, 900, 'easeInOutExpo');
+ //            event.preventDefault();
+ //        });
 });
