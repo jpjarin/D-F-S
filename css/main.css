@@ -497,95 +497,6 @@ span#fb-link{
     /*transform: translate(-50%,-50%);*/
     /* padding: 30px; */
 }
-button.scroll_down {
-  cursor: s-resize;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  height: 50px;
-  width: 30px;
-  bottom: 60px;
-  background-color: transparent;
-  border: 2px solid #000;
-  border-radius: 20px;
-  outline: none;
-}
-
-button.scroll_down:before {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  content: '';
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-  background-color: #000;
-  border-radius: 100%;
-  -webkit-animation: scroll_down_btn-animation 2s infinite;
-  animation: scroll_down_btn-animation 2s infinite;
-  box-sizing: border-box;
-}
-
-@keyframes scroll_down_btn-animation {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-            transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes scroll_down_btn-animation {
-  0% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-    transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.scroll-down i{
-    color: #f32bf3;
-    border: 2px solid #f32bf3;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    /* padding: 19px; */
-    background-color: #fff;
-    position: absolute;
-    /* bottom: 0; */
-    z-index: 9;
-    left: 50%;
-    bottom: 10%;
-    transform: translate(-50%,-50%);
-    transition: all 0.5s;
-}
-.scroll-down i:hover{
-    color: #30bbb5;
-    /*background-color: #f32bf3;*/
-    border-color: #30bbb5;
-    transition: all 0.5s;
-}
 
 /*.separator{
     border: 2px solid #000;
@@ -616,6 +527,10 @@ background: linear-gradient(45deg, #f788ba 0%,#f2a2eb 32%,#fd89d7 70%,#fd89d7 70
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f788ba', endColorstr='#fca9ae',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 padding:4em 0;
 }
+#about h1.display-4{
+    color: #00ffdd;
+    text-shadow: 2px 2px #000000;
+}
 #about .ribbon-banner{
     background: #30bbb5;
 }
@@ -639,9 +554,24 @@ padding:4em 0;
 }
 .services-list span{
   /*color: #5d0049;*/
-  color: #111111;
+  color: #000000;
 }
-
+.balloons{
+    position: absolute;
+    z-index: 1;
+    left: -5%;
+    bottom: -2em;
+    width: 28%;
+    overflow: hidden;
+}
+.wedding{
+        position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -5em;
+    width: 23%;
+    overflow: hidden;
+}
 
 
 
@@ -778,6 +708,18 @@ padding:4em 0;
 #fb-square{
     font-size: 3rem;
 }
+#about{
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 95%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 95%, 0% 100%);
+}
+#about .ribbon-banner{
+    font-size: 2.5rem;
+}
+.balloons{
+    left: auto;
+    right: 0;
+    bottom: 6em;
+}
 }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) and (max-width : 767px) and (orientation:landscape) {
@@ -795,9 +737,6 @@ padding:4em 0;
     left: 22%;
     bottom: 0;
     width: 20%;
-}
-.scroll-down{
-    bottom: 0;
 }
 }
 /* Tablets ----------- */
@@ -820,6 +759,10 @@ padding:4em 0;
     font-size: calc(35vmin / 260);
     left: -30px;
 }
+.balloons {
+    left: -13%;
+    bottom: 7em;
+}
 }
 /* Tablets (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
@@ -832,8 +775,8 @@ padding:4em 0;
 .teddy {
     font-size: calc(30vmin / 260);
 }
-.scroll-down{
-    bottom: 18%;
+.balloons{
+ bottom: 3em;
 }
 }
 /* Laptops ----------- */
